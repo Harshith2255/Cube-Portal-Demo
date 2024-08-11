@@ -13,7 +13,6 @@
 .card h3 {
   font-size: 24px;
   font-weight: bold;
-  margin-bottom: 8px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -21,7 +20,7 @@
 
 .card p {
   font-size: 20px;
-  margin: 4px 0;
+  margin: 8px 0;
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
