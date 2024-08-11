@@ -2,7 +2,6 @@
   border-bottom: 1px solid #ddd;
   padding: 16px;
   transition: transform 0.2s;
-  height: 150px;
 }
 
 .card:hover {
