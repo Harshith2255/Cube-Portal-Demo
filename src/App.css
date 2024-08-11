@@ -7,6 +7,7 @@
 .customers-list-container {
   width: 25%;
   overflow: auto;
+  border-right: 1px solid #ccc;
 }
 
 .customers-list-container::-webkit-scrollbar {
@@ -23,12 +24,13 @@
   padding: 80px 120px 0px;
 }
 
-@media screen and (max-width: 780px) {
+@media screen and (max-width: 768px) {
   .app-container {
     flex-direction: column;
   }
 
   .customers-list-container {
+    display: flex;
     width: 100%;
     overflow-x: auto;
     overflow-y: hidden;
@@ -38,10 +40,5 @@
     height: 75%;
     width: 100%;
     padding: 0px;
-  }
-
-  .customers-list {
-    display: flex;
-    flex-direction: row;
   }
 }

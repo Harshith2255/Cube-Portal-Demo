@@ -36,7 +36,7 @@ const CustomersList = ({
   );
 
   return (
-    <div className="customers-list">
+    <>
       {customers.map((customer, index) => (
         <CustomerCard
           key={customer.id}
@@ -47,7 +47,7 @@ const CustomersList = ({
         />
       ))}
       {loading && <div className="items-loader">Loading...</div>}
-    </div>
+    </>
   );
 };
 
