@@ -1,24 +1,41 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useCallback, useState } from "react";
+import "./App.css";
+import CustomersList from "./components/customer/CustomersList";
+import CustomerInfo from "./components/customer/CustomerInfo";
+import { useCustomers } from "./hooks/useCustomers";
+import Customer from "./models/Customer";
 
-function App() {
+const PAGE_SIZE = 15;
+
+function App(): JSX.Element {
+  const [page, setPage] = useState(1);
+  const [currentCustomer, setCurrentCustomer] = useState<Customer | null>(null);
+
+  const { customers, loading, hasMore } = useCustomers(page, PAGE_SIZE);
+
+  const loadMore = useCallback(() => {
+    setPage((prevPage: number) => prevPage + 1);
+  }, []);
+
+  const onCustomerClick = useCallback((customer: Customer) => {
+    setCurrentCustomer(customer);
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app-container">
+      <div className="customers-list-container">
+        <CustomersList
+          customers={customers}
+          loading={loading}
+          hasMore={hasMore}
+          loadMore={loadMore}
+          onClick={onCustomerClick}
+          currentCustomer={currentCustomer}
+        />
+      </div>
+      <div className="customer-info-container">
+        <CustomerInfo customer={currentCustomer} />
+      </div>
     </div>
   );
 }

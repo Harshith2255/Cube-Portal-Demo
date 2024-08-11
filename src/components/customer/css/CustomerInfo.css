@@ -1,0 +1,40 @@
+.customer-name {
+  font-size: 48px;
+  font-weight: bold;
+  margin: 0;
+  text-align: center;
+}
+
+.customer-title {
+  font-size: 30px;
+  color: #555;
+  margin-top: 8px;
+  text-align: center;
+}
+
+.customer-address {
+  font-size: 24px;
+  color: #777;
+  margin: 0;
+  line-height: 1.5;
+  margin-top: 8px;
+  text-align: center;
+}
+
+@media screen and (max-width: 780px) {
+  .customer-details {
+    padding: 10px;
+  }
+
+  .customer-name {
+    font-size: 36px;
+  }
+
+  .customer-title {
+    font-size: 24px;
+  }
+
+  .customer-address {
+    font-size: 18px;
+  }
+}

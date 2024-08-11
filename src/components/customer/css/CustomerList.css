@@ -1,0 +1,10 @@
+.customers-list {
+  border-right: 1px solid #ccc;
+  overflow-y: auto;
+}
+
+.items-loader {
+  text-align: center;
+  font-weight: bold;
+  padding: 18px;
+}
