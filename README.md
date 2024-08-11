@@ -1,6 +1,6 @@
 # Cube Portal Demo
 
-This project demonstrates a customer portal using React, Supabase for database management, and Unsplash API for fetching random images. The application is deployed on Vercel for preview and assessment purposes.
+This project demonstrates a responsive customer portal using React, Supabase for database management, and Unsplash API for fetching random images. The application is deployed on Vercel for preview and assessment purposes.
 
 ## Live Demo
 
