@@ -13,9 +13,7 @@ export const useCustomers = (page: number, pageSize: number) => {
     try {
       const { data, count } = await fetchCustomers(page, pageSize);
       setCustomers((prev) => [...prev, ...data]);
-      console.log(count);
       if (count) {
-        console.log(page * pageSize - 1);
         setHasMore(page * pageSize - 1 < count);
       }
     } catch (err) {

@@ -25,7 +25,6 @@ const CustomersList = ({
       if (loading) return;
       if (observer.current) observer.current.disconnect();
       observer.current = new IntersectionObserver((entries) => {
-        console.log(entries[0].isIntersecting);
         if (entries[0].isIntersecting && hasMore) {
           loadMore();
         }

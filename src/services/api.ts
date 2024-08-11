@@ -9,8 +9,6 @@ export const fetchCustomers = async (page: number, pageSize: number) => {
     .select("*", { count: "exact" })
     .range(start, end);
 
-  console.log("fetched data,", data);
-
   if (error) throw error;
   return { data, count };
 };
