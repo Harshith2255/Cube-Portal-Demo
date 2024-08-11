@@ -9,6 +9,7 @@ The application is live and can be accessed at: https://cube-portal-demo.vercel.
 ## Important Note
 
 This project uses Supabase for database operations and Unsplash API for fetching random images. Both of these services require personal account keys, which have been stored as environment variables for security reasons. The deployed version on Vercel includes the appropriate keys for demonstration purposes.
+The unsplash API has a rate limit of 50 requests/hour so please use accordingly.
 
 ## Project Setup
 
